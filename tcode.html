@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI Energy Efficiency Optimizer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f6f8;
+      margin: 0;
+      padding: 20px;
+    }
+    .container {
+      max-width: 700px;
+      margin: auto;
+      background: #fff;
+      padding: 30px;
+      border-radius: 8px;
+      box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    }
+    h1 {
+      color: #2c3e50;
+    }
+    label {
+      display: block;
+      margin-top: 15px;
+      font-weight: bold;
+    }
+    input, select {
+      width: 100%;
+      padding: 10px;
+      margin-top: 5px;
+      border: 1px solid #ccc;
+      border-radius: 4px;
+    }
+    button {
+      margin-top: 20px;
+      padding: 12px 20px;
+      background-color: #27ae60;
+      color: white;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+    }
+    button:hover {
+      background-color: #219150;
+    }
+    #result {
+      margin-top: 30px;
+      padding: 15px;
+      background-color: #ecf0f1;
+      border-left: 5px solid #27ae60;
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>AI Energy Efficiency Optimizer</h1>
+    <form id="energyForm">
+      <label for="buildingType">Building Type:</label>
+      <select id="buildingType" name="buildingType">
+        <option value="residential">Residential</option>
+        <option value="commercial">Commercial</option>
+        <option value="industrial">Industrial</option>
+      </select>
+
+      <label for="energyUsage">Monthly Energy Usage (kWh):</label>
+      <input type="number" id="energyUsage" name="energyUsage" required />
+
+      <label for="peakHours">Peak Usage Hours per Day:</label>
+      <input type="number" id="peakHours" name="peakHours" required />
+
+      <label for="renewableSources">Percentage of Renewable Energy Sources (%):</label>
+      <input type="number" id="renewableSources" name="renewableSources" required />
+
+      <button type="submit">Optimize</button>
+    </form>
+
+    <div id="result" style="display:none;">
+      <h2>Optimization Suggestions:</h2>
+      <ul id="suggestionsList"></ul>
+    </div>
+  </div>
+
+  <script>
+    document.getElementById('energyForm').addEventListener('submit', function(e) {
+      e.preventDefault();
+
+      // Gather input values
+      const buildingType = document.getElementById('buildingType').value;
+      const energyUsage = parseFloat(document.getElementById('energyUsage').value);
+      const peakHours = parseFloat(document.getElementById('peakHours').value);
+      const renewableSources = parseFloat(document.getElementById('renewableSources').value);
+
+      // Placeholder for AI logic - replace with actual AI model integration
+      let suggestions = [];
+
+      if (energyUsage > 1000) {
+        suggestions.push("Consider implementing energy-efficient appliances to reduce consumption.");
+      }
+
+      if (peakHours > 5) {
+        suggestions.push("Shift some energy-intensive tasks to off-peak hours to balance load.");
+      }
+
+      if (renewableSources < 50) {
+        suggestions.push("Increase the use of renewable energy sources to enhance sustainability.");
+      }
+
+      if (suggestions.length === 0) {
+        suggestions.push("Your current energy usage is optimized. Keep up the good work!");
+      }
+
+      // Display suggestions
+      const suggestionsList = document.getElementById('suggestionsList');
+      suggestionsList.innerHTML = '';
+      suggestions.forEach(function(suggestion) {
+        const li = document.createElement('li');
+        li.textContent = suggestion;
+        suggestionsList.appendChild(li);
+      });
+
+      document.getElementById('result').style.display = 'block';
+    });
+  </script>
+</body>
+</html>

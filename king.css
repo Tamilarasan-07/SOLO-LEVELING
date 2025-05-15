@@ -1,0 +1,119 @@
+* {
+    background-color: black;
+
+}
+
+.head{
+    display: flex;
+    justify-content: space-between;
+  
+} 
+.head,.y,.n{
+    background-color: bisque;
+}
+.navigation{
+    display:flex;
+    background-color: bisque;
+
+}
+
+nav {
+    padding-top: 15px;
+
+    color: aqua;
+    display: flex;
+    justify-content: center;
+    color: aquamarine;
+}
+
+.ho {
+    margin-left: 85%;
+
+
+}
+
+.one {
+    text-align: center;
+    color: white;
+    color: aquamarine;
+}
+
+.two {
+    text-align: center;
+    color: aquamarine;
+}
+
+.three {
+    color: aquamarine;
+}
+
+.four {
+    text-align: center;
+    padding-top: 20px;
+    color: aquamarine;
+}
+
+.five {
+    text-align: center;
+    color: aquamarine;
+    padding-top: 70px;
+}
+
+.seven {
+    padding-top: 10px;
+    text-align: center;
+    color: aquamarine;
+}
+
+.box {
+    border-color: rgb(8, 119, 184);
+    width: 400px;
+    border-width: 5px;
+    border-style: solid;
+    display: inline-block;
+    text-align: center;
+    color: white;
+
+}
+
+.box:hover {
+    background-color: rgb(113, 207, 19);
+    color: blue;
+}
+
+.lake {
+    color: aquamarine;
+}
+
+.fun {
+    color: aquamarine;
+}
+
+.insta,.insta2,.insta3{
+    background-color:chartreuse;
+    color: rgb(85, 0, 255);
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+    display: flex;
+    
+
+}
+.insta:hover {
+
+        color: crimson;
+}
+.insta2:hover{
+               color: crimson;
+}
+.insta3:hover{
+                color: crimson;
+}
+.ended {
+    text-align: center;
+}
+.hend{
+    display:flex;
+    text-align: center;
+    width: 100%;
+}
